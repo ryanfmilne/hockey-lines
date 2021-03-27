@@ -1,0 +1,108 @@
+body {
+  background: rgb(255, 117, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 117, 0, 1) 0%,
+    rgba(255, 216, 0, 1) 48%,
+    rgba(255, 117, 0, 1) 100%
+  );
+  font-family: helvetica;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-shadow: 1px 1px 2px #713f01ad;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  line-height: 2.2;
+  font-size: 20px;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 2em;
+}
+
+.logo {
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.roster {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  color: #fff;
+}
+
+/* Position the content inside the overlay */
+.roster-content {
+  position: relative;
+  top: 5%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.line {
+  margin: 20px auto;
+  text-align: center;
+  background-color: #000000d1;
+  width: 95%;
+  max-width: 500px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.label {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #353535;
+}
+
+.no-border {
+  border-bottom: none;
+}
+
+.forwards {
+  width: 33%;
+}
+
+.defense {
+  width: 50%;
+}
