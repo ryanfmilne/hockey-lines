@@ -1,0 +1,21 @@
+body {
+  background: #fff;
+}
+
+td {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.line {
+  background-color: #fff;
+  color: #000;
+}
+
+h1 {
+  text-shadow: none;
+  color: #000;
+}
+
+.fas {
+  color: #000;
+}
