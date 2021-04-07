@@ -1,7 +1,7 @@
 let position = document.getElementsByClassName('position');
 let rosterPlayers = document.getElementsByClassName('roster-players');
 let logo = document.getElementsByClassName('logo');
-
+let refreshButton = document.querySelector("#refresh-btn")
 
 
 for (var i = 0; i < position.length; i++) {
@@ -35,12 +35,15 @@ for (var i = 0; i < position.length; i++) {
     }
 }
 
+// Refresh button open dialog //
+refreshButton.addEventListener("click", openClearDialog)
+
 
 // click logo to reset // 
 document.addEventListener('click', function (event) {
 
 	// If the clicked element doesn't have the right selector, bail
-	if (!event.target.matches('.logo')) return;
+	if (!event.target.matches('#confirm')) return;
 
 	// Log the clicked element in the console
 	console.log(event.target);
@@ -48,7 +51,28 @@ document.addEventListener('click', function (event) {
         position[i].innerHTML = "-";
     }
 
+    closeClearDialog();
+
 }, false);
+
+
+/* Cancel Button */
+let cancelButton = document.querySelector("#cancel");
+cancelButton.addEventListener('click', function() {
+    closeClearDialog();
+});
+
+/* Open Clear Dialog */
+function openClearDialog() {
+    document.getElementById("clearDialog").style.height = "100px";
+    document.getElementById("clearDialog").style.padding = "6px 0px";
+  }
+
+/* Close Clear Dialog */
+function closeClearDialog() {
+    document.getElementById("clearDialog").style.height = "0%";
+    document.getElementById("clearDialog").style.padding = "0";
+  }
 
 
 
