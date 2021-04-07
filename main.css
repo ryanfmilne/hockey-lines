@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+}
+
+.invisable {
+  visibility: hidden;
+}
+
 body {
   background: rgb(255, 147, 67);
   background: radial-gradient(
@@ -20,6 +28,10 @@ h1 {
   text-shadow: 1px 1px 2px #713f01ad;
 }
 
+#main {
+  text-align: center;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -33,6 +45,10 @@ li {
 .header {
   text-align: center;
   color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0px;
 }
 
 .header h1 {
@@ -42,6 +58,10 @@ li {
 .logo {
   border-radius: 50%;
   border: 2px solid #fff;
+}
+
+.tagline {
+  margin-bottom: 30px;
 }
 
 .roster {
@@ -65,7 +85,13 @@ li {
   top: 5%; /* 25% from the top */
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  margin-top: 0; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.roster-players {
+  cursor: pointer;
 }
 
 .line {
@@ -78,6 +104,10 @@ li {
   color: #fff;
 }
 
+.position {
+  cursor: pointer;
+}
+
 table {
   width: 100%;
   table-layout: fixed;
@@ -86,7 +116,8 @@ table {
 .label {
   font-size: 24px;
   font-weight: bold;
-  padding: 20px;
+  line-height: 10px;
+  padding-top: 15px;
 }
 
 td {
@@ -104,4 +135,34 @@ td {
 
 .defense {
   width: 50%;
+}
+
+/* CLEAR DIALOG BOX */
+
+#clearDialog {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 7px 32px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
